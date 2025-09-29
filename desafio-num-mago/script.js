@@ -3,7 +3,7 @@ let numeroSecreto = Math.floor(Math.random() * 20) + 1;
 let tentativas = 5;
 
 
-// Seleciona elementos
+// Seleciona elementos que serão utilizados
 const input = document.getElementById("input-numero");
 const btn = document.getElementById("btn-tentar");
 const card = document.querySelector(".card");
@@ -14,7 +14,7 @@ let mensagem2 = document.getElementById("mensagem2");
 mensagem.textContent = numeroSecreto; 
 let playing = false;
 
-// Função que vira a carta
+// Função que vira a carta, busquei no codepen
 function flipCard() {
     if (playing) return;
     playing = true;
@@ -40,7 +40,7 @@ btn.addEventListener("click", () => {
     }
 
     tentativas--;
-
+// Logica do virar da carta
     if (palpite === numeroSecreto) {
         flipCard(); // carta vira
         btn.disabled = true;
